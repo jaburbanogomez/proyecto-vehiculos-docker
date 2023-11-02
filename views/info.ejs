@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
+    <link rel="stylesheet" href="css/style.css">
+    <title>Informacion</title>
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0%;
+        }
+
+        p {
+            text-align: justify;
+            font-size: 16px;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+
+<body>
+    <%- include('./menu') %>
+
+    <main class="container">
+        <h1 class="text-info text-center">
+            <i class="fas fa-info-circle"></i> Informacion de la plataforma
+        </h1>
+        <div style="margin-bottom: 50px"></div>
+        <p><b>La Situación:</b> Una revisión de 67 casos de corrupción en el sector de la salud en Colombia, ocurridos entre 2016 y 2020, revela que la corrupción se ha arraigado en el sistema de salud del país, con un costo estimado de 1,63 billones de pesos colombianos. Los servidores públicos son responsables del 46,2% de estos casos, mientras que los actores privados contribuyen al 37,3% de los casos. Los delitos más comunes relacionados con la corrupción incluyen la celebración de contratos sin cumplir los requisitos legales y el prevaricato por omisión. Un 25% de los casos están vinculados a irregularidades en el suministro de medicamentos, como sobrecostos, beneficiarios ficticios y falsificación de medicamentos.
+
+            La Solución: La tecnología Blockchain se presenta como una solución para abordar estas cuestiones de corrupción y eficiencia en la cadena de suministro de medicamentos:
+
+        </p>
+        <p>
+            <b>Eficiencia y Transparencia:</b> Blockchain proporciona eficiencia y transparencia, lo que es crucial para garantizar la integridad y confiabilidad en la gestión de la cadena de suministro.
+            
+            Contratos Inteligentes: Permite a las empresas eliminar intermediarios y llevar a cabo transacciones directas mediante contratos inteligentes.
+            
+            Integración de Logística y Finanzas: Facilita una mayor integración entre la logística y los servicios financieros, lo que mejora la cooperación de datos entre las partes involucradas.
+            
+            Rastreo Automático: La tecnología permite el uso de etiquetas RFID (identificación por radiofrecuencia) para rastrear automáticamente los artículos en la cadena de suministro.
+            
+            Procesamiento de Pagos Eficiente: Soluciones de pago integradas reducen el tiempo entre el pedido y el pago, lo que garantiza un movimiento adecuado y puntual de los productos.
+            
+            El Impacto: La implementación de Blockchain en la cadena de suministro de medicamentos en Colombia podría reducir la malversación de medicamentos y garantizar que cada paciente reciba el tratamiento prescrito por los médicos. Esto no solo mejoraría la eficiencia, sino que también ayudaría a combatir la corrupción y garantizar un acceso equitativo a los medicamentos necesarios.
+            
+            </p>
+            <p><b>Fuentes: </b> 
+                <a href="https://transparenciacolombia.org.co/riesgos-de-corrupcion-en-la-reforma-a-la-salud/" target="_blank">Transparencia Colombia</a>,
+                <a href="https://www.larepublica.co/economia/sectores-advierten-riesgos-de-posible-corrupcion-en-sistema-de-salud-de-la-reforma-3626390" target="_blank">La República</a>
+            </p>
+        
+        
+
+        
+    </main>
+
+    
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+
+    <!-- Incluir Dexie -->
+    <script src="https://unpkg.com/dexie@latest/dist/dexie.js"></script>
+
+    <!-- Archivo JavaScript personalizado -->
+    <script src="js/main.js" type="module"></script>
+</body>
+
+</html>

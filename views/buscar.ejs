@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Buscar</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+    <%- include('./menu') %>
+
+        <main class="container">
+            <h1 class="text-info text-center">
+                <i class="fas fa-vote-yea"></i> Verificar de Medicamentos
+            </h1>
+            <div style="margin-bottom: 50px"></div>
+            <div class="d-flex justify-content-center">
+
+
+                <form action="/buscar" class="w-50" method="post">
+                    <div class="form-group">
+                        <label for="proname" style=" color: rgb(76, 91, 119);">Firma del medicamento</label>
+                        <div class="input-group ">
+                            <input type="text" id="seller" class="form-control m-0" name="hash" autocomplete="off"
+                                placeholder="Hash" value="<%= resultado.hash %>" />
+                            <button class="btn btn-outline-secondary m-0" name="action" value="buscar">
+                                <span class="fa fa-search"></span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="border-top mar" style="height: 10%;"></div>
+                    <% if(resultado.length>0) { %>
+                        <div class="row">
+                            <div class="col">
+                                <div class="form-group" style=" color: rgb(76, 91, 119);">
+                                    <label for="apellido" class="mb-0">N° lote</label>
+                                    <input type="text" id="nombre" class="form-control m-0" name="nombre" autocomplete="off"
+                                        placeholder="lote" />
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-group" style=" color: rgb(76, 91, 119);">
+                                    <label for="apellido" class="mb-0">Medicamento</label>
+                                    <input type="text" id="nombre" class="form-control m-0" name="nombre" autocomplete="off"
+                                        placeholder="Nombre del medicamento" />
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="row">
+                            <div class="col">
+                                <div class="form-group" style=" color: rgb(76, 91, 119);">
+                                    <label for="apellido" class="mb-0">Distribuidor</label>
+                                    <input type="text" id="seller" class="form-control m-0" name="temperatura"
+                                        autocomplete="off" placeholder="Distribuidor" />
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-group" style=" color: rgb(76, 91, 119);">
+                                    <label for="apellido" class="mb-0">Farmacia</label>
+                                    <input type="input" id="seller" class="form-control m-0" name="fecha_f"
+                                        autocomplete="off" placeholder="Farmacia" />
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-group" style=" color: rgb(76, 91, 119);">
+                                    <label for="apellido" class="mb-0">Temperatura</label>
+                                    <input type="input" id="price" class="form-control m-0" name="fecha_v"
+                                        autocomplete="off" placeholder="Cadena de firo" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <div class="form-group" style=" color: rgb(76, 91, 119);">
+                                    <label for="apellido" class="mb-0">Fecha de fabricacion</label>
+                                    <input type="date" id="seller" class="form-control m-0" name="fecha_f"
+                                        autocomplete="off" placeholder="Fecha de fabricacion" />
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-group" style=" color: rgb(76, 91, 119);">
+                                    <label for="apellido" class="mb-0">Fecha de vencimiento</label>
+                                    <input type="date" id="price" class="form-control m-0" name="fecha_v"
+                                        autocomplete="off" placeholder="Fecha de vencimiento" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text-center">
+                            <button class="btn " name="action" value="validar"
+                                style=" background-color: rgb(49, 143, 231); color: rgb(255, 255, 255);">Validar</button>
+                        </div>
+                        <% } %>
+                </form>
+
+            </div>
+
+
+        <!-- Scripts -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+        <script src="https://unpkg.com/dexie@latest/dist/dexie.js"></script>
+        <script src="js/main.js" type="module"></script>
+</body>
+
+</html>
