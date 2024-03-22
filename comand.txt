@@ -1,0 +1,10 @@
+//docker build -t blockchaindocker .
+//docker run -it -p 4000:3000 blockchaindocker
+//docker run -d -p 4000:3000  blockchaindocker 
+//docker run -- name DockerNodeJsApp -p 4000:3000 blockchaindocker
+// docker images
+// docker ps
+// docker stop + id
+// docker rm + id 
+
+
